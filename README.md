@@ -22,8 +22,10 @@ This project allows multiple clients to connect to a server and exchange message
 ##  Project Structure
 src/
 ├── ChatServer.java
+
 ├── ChatClient.java
-├── ClientHandler.java
+
+
 └── DBConnection.java
 
 ## How to Run the Project
@@ -46,4 +48,5 @@ src/
 
 ## Developer
 MO JAHANGEER
+
 
