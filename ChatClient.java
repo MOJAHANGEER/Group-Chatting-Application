@@ -158,20 +158,20 @@ public class ChatClient extends JFrame {
             bubble.setBackground(Color.WHITE);
         }
 
-        // 🔹 Sender name (TOP)
+        // Sender name (TOP)
         JLabel nameLabel = new JLabel(sender);
         nameLabel.setFont(new Font("Arial", Font.BOLD, 11));
         nameLabel.setForeground(isMe ? Color.WHITE : new Color(0, 102, 0));
         nameLabel.setAlignmentX(Component.LEFT_ALIGNMENT);
 
-        // 🔹 Message text (SECOND LINE)
+        // Message text (SECOND LINE)
         JLabel messageLabel = new JLabel(
                 "<html><body style='width:200px'>" + message + "</body></html>");
         messageLabel.setFont(new Font("Arial", Font.PLAIN, 12));
         messageLabel.setForeground(isMe ? Color.WHITE : Color.BLACK);
         messageLabel.setAlignmentX(Component.LEFT_ALIGNMENT);
 
-        // 🔹 Time (BOTTOM RIGHT)
+        // Time (BOTTOM RIGHT)
         JLabel timeLabel = new JLabel(getTime());
         timeLabel.setFont(new Font("Arial", Font.PLAIN, 8));
         timeLabel.setForeground(isMe ? Color.LIGHT_GRAY : Color.GRAY);
@@ -203,3 +203,4 @@ public class ChatClient extends JFrame {
         }
     }
 }
+
