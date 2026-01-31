@@ -64,7 +64,7 @@ class ClientHandler extends Thread {
 
             out = new PrintWriter(socket.getOutputStream(), true);
 
-            ChatServer.addClient(this); // 🔥 AFTER streams ready
+            ChatServer.addClient(this); // Adding client
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -81,10 +81,10 @@ class ClientHandler extends Thread {
                 String sender = message.split(":")[0];
                 String msg = message.substring(message.indexOf(":") + 1).trim();
 
-                // 🔥 DATABASE SAVE
+                // SAVE IN DATABASE
                 saveMessage(sender, msg);
 
-                // 🔥 SEND TO ALL CLIENTS
+                // SEND TO ALL CLIENTS
                 ChatServer.broadcast(message);
             }
 
@@ -121,4 +121,5 @@ class ClientHandler extends Thread {
     }
 
 }
+
 
